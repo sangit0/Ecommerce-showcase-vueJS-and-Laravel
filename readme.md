@@ -1,18 +1,18 @@
 Ecommerce with laravel 5.5 and VUE JS
 
 TechStack
-  -VueJS v2
-  -vue-Router 
-  -vuex
-  -vue resource
-  -vuetify
-  -Laravel 5.5 as backend
-  -Passport auth laravel
-  -Node.js
-  -Mysql
-  -Browserify
-  -webpack
-  -laravel mix
+  - VueJS v2
+  - vue-Router 
+  - vuex
+  - vue resource
+  - vuetify
+  - Laravel 5.5 as backend
+  - Passport auth laravel
+  - Node.js
+  - Mysql
+  - Browserify
+  - webpack
+  - laravel mix
 
 ## About Laravel
 
