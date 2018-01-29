@@ -45,9 +45,11 @@
               <v-icon>{{ child.icon }}</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
+                <router-link :to="child.url">
               <v-list-tile-title>
                 {{ child.text }}
               </v-list-tile-title>
+              </router-link>
             </v-list-tile-content>
           </v-list-tile>
         </v-list-group>
@@ -57,11 +59,15 @@
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
+              <router-link :to="item.url">
             <v-list-tile-title>
               {{ item.text }}
             </v-list-tile-title>
+        </router-link>
+
           </v-list-tile-content>
         </v-list-tile>
+
 
       </template>
     </v-list>
@@ -74,16 +80,16 @@
       data: () => ({
         dialog: false,
         items: [
-          { icon: 'contacts', text: 'Dashboard' },
-          { icon: 'dns', text: 'Product' },
-          { icon: 'content_copy', text: 'Category Product' },
+          { icon: 'contacts', text: 'Dashboard',url:"/" },
+          { icon: 'dns', text: 'Product',url:"/product" },
+          { icon: 'content_copy', text: 'Category Product',url:"/product-category" },
           {
             icon: 'keyboard_arrow_up',
             'icon-alt': 'keyboard_arrow_down',
             text: 'Multi',
             model: false,
             children: [
-              { icon: 'add', text: 'Create label' }
+              { icon: 'add', text: 'Create label',url:"/demo"  }
             ]
           }
 

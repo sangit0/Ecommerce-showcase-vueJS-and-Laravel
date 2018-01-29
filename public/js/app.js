@@ -16784,7 +16784,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -16866,17 +16866,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       dialog: false,
-      items: [{ icon: 'contacts', text: 'Dashboard' }, { icon: 'dns', text: 'Product' }, { icon: 'content_copy', text: 'Category Product' }, {
+      items: [{ icon: 'contacts', text: 'Dashboard', url: "/" }, { icon: 'dns', text: 'Product', url: "/product" }, { icon: 'content_copy', text: 'Category Product', url: "/product-category" }, {
         icon: 'keyboard_arrow_up',
         'icon-alt': 'keyboard_arrow_down',
         text: 'Multi',
         model: false,
-        children: [{ icon: 'add', text: 'Create label' }]
+        children: [{ icon: 'add', text: 'Create label', url: "/demo" }]
       }]
     };
   }
@@ -17023,13 +17029,20 @@ var render = function() {
                               _c(
                                 "v-list-tile-content",
                                 [
-                                  _c("v-list-tile-title", [
-                                    _vm._v(
-                                      "\n                " +
-                                        _vm._s(child.text) +
-                                        "\n              "
-                                    )
-                                  ])
+                                  _c(
+                                    "router-link",
+                                    { attrs: { to: child.url } },
+                                    [
+                                      _c("v-list-tile-title", [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(child.text) +
+                                            "\n              "
+                                        )
+                                      ])
+                                    ],
+                                    1
+                                  )
                                 ],
                                 1
                               )
@@ -17053,13 +17066,20 @@ var render = function() {
                         _c(
                           "v-list-tile-content",
                           [
-                            _c("v-list-tile-title", [
-                              _vm._v(
-                                "\n              " +
-                                  _vm._s(item.text) +
-                                  "\n            "
-                              )
-                            ])
+                            _c(
+                              "router-link",
+                              { attrs: { to: item.url } },
+                              [
+                                _c("v-list-tile-title", [
+                                  _vm._v(
+                                    "\n              " +
+                                      _vm._s(item.text) +
+                                      "\n            "
+                                  )
+                                ])
+                              ],
+                              1
+                            )
                           ],
                           1
                         )
