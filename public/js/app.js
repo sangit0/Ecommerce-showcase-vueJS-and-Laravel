@@ -16423,7 +16423,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -16438,6 +16438,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Admin_layouts_headerComponents_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Admin_layouts_headerComponents_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Admin_layouts_leftSideBar_vue__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Admin_layouts_leftSideBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Admin_layouts_leftSideBar_vue__);
+//
+//
 //
 //
 //
@@ -17128,12 +17130,11 @@ var render = function() {
             "v-container",
             { attrs: { fluid: "", "fill-height": "" } },
             [
-              _c(
-                "v-layout",
-                { attrs: { "justify-center": "", "align-center": "" } },
-                [_c("router-view")],
-                1
-              )
+              _c("router-view"),
+              _vm._v(" "),
+              _c("v-layout", {
+                attrs: { "justify-center": "", "align-center": "" }
+              })
             ],
             1
           )
@@ -17215,6 +17216,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -17226,7 +17241,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "div",
+    [
+      _c("v-alert", { attrs: { type: "success", value: true } }, [
+        _vm._v("\n  This is a success alert.\n")
+      ]),
+      _vm._v(" "),
+      _c("v-alert", { attrs: { type: "info", value: true } }, [
+        _vm._v("\n  This is a info alert.\n")
+      ]),
+      _vm._v(" "),
+      _c("v-alert", { attrs: { type: "warning", value: true } }, [
+        _vm._v("\n  This is a warning alert.\n")
+      ]),
+      _vm._v(" "),
+      _c("v-alert", { attrs: { type: "error", value: true } }, [
+        _vm._v("\n  This is a error alert.\n")
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

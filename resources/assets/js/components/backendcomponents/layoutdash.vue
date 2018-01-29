@@ -7,13 +7,8 @@
 
     <!-- conten router -->
     <v-content>
-      <v-container fluid fill-height>
-        <v-layout justify-center align-center>
-            <!-- Content will load Here -->
-            <router-view></router-view>
-
-        </v-layout>
-      </v-container>
+        <!-- Content will load Here -->
+        <router-view></router-view>
     </v-content>
 
   </v-app>
