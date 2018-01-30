@@ -18,5 +18,4 @@ class UserController extends Controller
      $r = User::all();
      return $r;
     }
-
 }

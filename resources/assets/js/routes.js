@@ -2,13 +2,15 @@ import Vue from 'vue'
 import dash from './components/backEndComponents/layoutdash.vue'
 import home from './components/backEndComponents/Admin/dashboard.vue'
 import productcategory from './components/product-category/product-categories.vue'
+import store from './components/ecommerce-front/store.vue'
 
 import Login from './components/authentication/Login.vue'
 
 const routes = [
-  {
+
+    {
     name: 'dashboard',
-    path: '/',
+    path: '/admin',
     component: dash,
     meta:{
         users:true
@@ -29,6 +31,14 @@ const routes = [
   meta:{
       visitors:true
   }
+},
+{
+  name: 'store',
+  path: '/',
+  component: store,
+  meta:{
+      visitors:true
+ }
 }
 ];
 
