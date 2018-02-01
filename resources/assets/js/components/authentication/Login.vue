@@ -59,7 +59,7 @@ export default{
         login(){
             var data={
                 client_id: 2,
-                client_secret:'LVSBC2SrSWMvbZMruTyyAYoh4RkWiUNiWAVMyDY2',
+                client_secret:'EnKrZ4zGwJt4ngAU1ABgpBVFeHoillqstoMxrdkG',
                 grant_type:'password',
                 username:this.user.email,
                 password:this.user.password
@@ -67,9 +67,9 @@ export default{
             };
                    axios.post('oauth/token',data)
                     .then(response => {
-                        //console.log(response);
+                      //  console.log(response);
                         this.$auth.setToken(response.data.access_token,response.data.expires_in +Date.now())
-                        this.$router.push("/admin/home");
+                        this.$router.push("/admin");
                     })
         }
     }

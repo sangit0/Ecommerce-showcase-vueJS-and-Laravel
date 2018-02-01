@@ -80,7 +80,7 @@
       data: () => ({
         dialog: false,
         items: [
-          { icon: 'contacts', text: 'Dashboard',url:"/" },
+          { icon: 'contacts', text: 'Dashboard',url:"/admin" },
           { icon: 'dns', text: 'Product',url:"/product" },
           { icon: 'content_copy', text: 'Category Product',url:"/product-category" },
           {
