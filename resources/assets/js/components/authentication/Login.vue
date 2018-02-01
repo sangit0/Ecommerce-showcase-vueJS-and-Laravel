@@ -69,7 +69,7 @@ export default{
                     .then(response => {
                         //console.log(response);
                         this.$auth.setToken(response.data.access_token,response.data.expires_in +Date.now())
-                        this.$router.push("/home");
+                        this.$router.push("/admin/home");
                     })
         }
     }
