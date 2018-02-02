@@ -13260,9 +13260,7 @@ router.beforeEach(function (to, from, next) {
     return record.meta.visitors;
   })) {
     if (__WEBPACK_IMPORTED_MODULE_0_vue___default.a.auth.isLoggedin()) {
-      next({
-        path: '/home'
-      });
+      next();
     } else {
       next();
     }
@@ -17945,6 +17943,10 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(111)
+}
 var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(57)
@@ -17953,7 +17955,7 @@ var __vue_template__ = __webpack_require__(58)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -18003,14 +18005,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['className'],
     data: function data() {
         return {
-            loginstatus: !this.$auth.isLoggedin
+            isLoggedin: this.$auth.isLoggedin()
         };
+    },
+
+    methods: {
+        logout: function logout() {
+            this.$auth.destroyToken();
+            this.isLoggedin = this.$auth.isLoggedin();
+        }
     }
+
 });
 
 /***/ }),
@@ -18022,24 +18036,26 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "ul",
-      { class: _vm.className },
-      [
-        !_vm.loginstatus
-          ? _c("router-link", { attrs: { to: "/login", tag: "li" } }, [
+    !_vm.isLoggedin
+      ? _c(
+          "ul",
+          { class: _vm.className },
+          [
+            _c("router-link", { attrs: { to: "/login", tag: "li" } }, [
               _c("a", [_vm._v("Login")])
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        !_vm.loginstatus
-          ? _c("router-link", { attrs: { to: "/register", tag: "li" } }, [
+            ]),
+            _vm._v(" "),
+            _c("router-link", { attrs: { to: "/register", tag: "li" } }, [
               _c("a", [_vm._v("Register")])
             ])
-          : _vm._e()
-      ],
-      1
-    )
+          ],
+          1
+        )
+      : _c("ul", { class: _vm.className }, [
+          _c("li", { staticClass: "li-pointer" }, [
+            _c("a", { on: { click: _vm.logout } }, [_vm._v("Logout")])
+          ])
+        ])
   ])
 }
 var staticRenderFns = []
@@ -18608,7 +18624,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     data: function data() {
         return {
             items: this.$store.getters.bagItem,
-            loginstatus: !this.$auth.isLoggedin
+            loginstatus: this.$auth.isLoggedin
         };
     },
 
@@ -18648,9 +18664,9 @@ var render = function() {
       _c("br"),
       _c("br"),
       _vm._v(" "),
-      !_vm.loginstatus
+      !this.$auth.isLoggedin()
         ? _c("h3", { staticClass: "text text-danger" }, [
-            _vm._v(" You are not logged in")
+            _vm._v(" You are not logged in! Please logged in")
           ])
         : _vm._e(),
       _vm._v(" "),
@@ -39290,6 +39306,53 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(112);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("54159c8a", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1bc52496\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login-bar.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1bc52496\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./login-bar.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.li-pointer{\n    cursor: pointer;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

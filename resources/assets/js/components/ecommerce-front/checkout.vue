@@ -5,7 +5,7 @@
 
         </loginbar>
          <br /><br /><br />
-         <h3 class="text text-danger" v-if="!loginstatus"> You are not logged in</h3>
+         <h3 class="text text-danger" v-if="!this.$auth.isLoggedin()"> You are not logged in! Please logged in</h3>
 
          <div class="row">
     <div class="col-sm-7">
@@ -65,7 +65,7 @@ import loginbar from "./login-bar.vue"
         data(){
             return{
                 items:this.$store.getters.bagItem,
-                loginstatus:!this.$auth.isLoggedin
+                loginstatus:this.$auth.isLoggedin
             }
         },
         methods: {

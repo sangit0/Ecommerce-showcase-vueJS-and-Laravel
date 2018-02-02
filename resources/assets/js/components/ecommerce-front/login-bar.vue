@@ -1,10 +1,14 @@
 <template>
 <div>
-    <ul :class="className">
-        <router-link to="/login" tag="li" v-if="!loginstatus"><a>Login</a></router-link>
-        <!-- <li v-if="loginstatus" class="li-pointer"><a @click="logoutLocal">Logout</a></li> -->
-        <router-link to="/register" tag="li" v-if="!loginstatus"><a>Register</a></router-link>
+    <ul :class="className" v-if="!isLoggedin">
+        <router-link to="/login" tag="li" ><a>Login</a></router-link>
+        <router-link to="/register" tag="li" ><a>Register</a></router-link>
      </ul>
+     <ul :class="className" v-else="isLoggedin">
+         <li  class="li-pointer"><a @click="logout">Logout</a></li>
+
+      </ul>
+
 </div>
 
 </template>
@@ -13,8 +17,20 @@
             props: ['className'],
             data(){
                 return {
-				loginstatus : !this.$auth.isLoggedin
+                    isLoggedin:this.$auth.isLoggedin()
 				}
+            },
+            methods: {
+                logout(){
+                    this.$auth.destroyToken();
+                    this.isLoggedin=this.$auth.isLoggedin();
+                }
             }
+
         }
 </script>
+<style>
+.li-pointer{
+    cursor: pointer;
+}
+</style>

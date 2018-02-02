@@ -40,9 +40,7 @@ router.beforeEach((to, from, next) => {
 
   if (to.matched.some(record => record.meta.visitors)) {
     if (Vue.auth.isLoggedin()) {
-      next({
-        path: '/home',
-      });
+      next();
     } else {
       next();
     }
