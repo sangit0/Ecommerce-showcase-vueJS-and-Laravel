@@ -3,6 +3,7 @@ import dash from './components/backEndComponents/layoutdash.vue'
 import home from './components/backEndComponents/Admin/dashboard.vue'
 import productcategory from './components/product-category/product-categories.vue'
 import store from './components/ecommerce-front/store.vue'
+import checkout from './components/ecommerce-front/checkout.vue'
 
 import Login from './components/authentication/Login.vue'
 
@@ -36,6 +37,14 @@ const routes = [
   name: 'store',
   path: '/',
   component: store,
+  meta:{
+      visitors:true
+ }
+},
+{
+  name: 'checkout',
+  path: '/checkout',
+  component: checkout,
   meta:{
       visitors:true
  }

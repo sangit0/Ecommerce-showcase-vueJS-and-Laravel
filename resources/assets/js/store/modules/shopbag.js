@@ -1,6 +1,7 @@
 const state = {
 	bagItem: [
-	]
+	],
+	total_cart_price:0
 }
 
 const mutations = {
@@ -28,8 +29,15 @@ const mutations = {
 	'REMOVE_ITEM' (state, {item}) {
 		const record = state.bagItem.find(value => value.id == item.id);
 		state.bagItem.splice(state.bagItem.indexOf(record), 1);
+	},
+	'TOTAL_VALUE' (state) {
+		let sum = 0;
+		state.bagItem.map((item, idx) => {
+			sum += item.price * item.quantity;
+		});
+		state.total_cart_price = sum;
+		}
 	}
-}
 
 const actions = {
 	clearCart: ({commit}) => {
@@ -41,12 +49,8 @@ const getters = {
 	bagItem: (state) => {
 		return state.bagItem;
 	},
-	checkValue: (state) => {
-		let res = 0;
-		state.bagItem.map((item, idx) => {
-			res += item.price * item.quantity;
-		});
-		return res;
+	total_price: (state) => {
+		return state.total_cart_price;
 	}
 }
 

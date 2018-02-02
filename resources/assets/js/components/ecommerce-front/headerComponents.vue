@@ -12,17 +12,13 @@
 			<small>{{slogan}}</small>
 
             <ul class="nav navbar-nav navbar-right">
-
 						  <v-btn icon  @click.stop="$store.state.shopping_cart_btn = !$store.state.shopping_cart_btn">
 							  <v-badge overlap color="red"> <span slot="badge">{{cartItemLength}}</span>
 							  <v-icon color="white lighten-1">shopping_cart</v-icon>
 						  </v-badge>
 					  	  </v-btn>
-
-                <router-link to="/login" tag="li" v-if="!loginstatus"><a>Login</a></router-link>
-                <!-- <li v-if="loginstatus" class="li-pointer"><a @click="logoutLocal">Logout</a></li> -->
-		        <router-link to="/register" tag="li" v-if="!loginstatus"><a>Register</a></router-link>
 		     </ul>
+			 <login :className="'nav navbar-nav navbar-default navbar-right'"></login>
 
 			 	<!-- showing cart list -->
 
@@ -50,6 +46,7 @@
 
 <script>
    import cart from "./cart.vue"
+   import login from "./login-bar.vue"
 
         export default{
             data(){
@@ -59,10 +56,10 @@
 					alt: "Ecommerce demo logo"
 				},
 				slogan:"Happy shopping and enjoy",
-                loginstatus : !this.$auth.isLoggedin                }
+				}
             },
 			components: {
-			  cart
+			  cart,login
 		  }
 		  ,computed: {
     			cartItemLength() {
