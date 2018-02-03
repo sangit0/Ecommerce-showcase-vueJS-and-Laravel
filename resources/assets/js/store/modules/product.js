@@ -51,10 +51,7 @@ const actions = {
 
 }
 const mutations = {
-	'UPDATE_CART_ON_LIST' (state, productNew) {
-		state.productList = productNew;
-		state.show = false;
-	}
+	
 }
 
 const getters = {

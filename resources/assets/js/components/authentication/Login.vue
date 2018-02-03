@@ -1,11 +1,8 @@
 <template>
-  <v-app id="inspire">
-    <v-content>
-      <v-container fluid fill-height>
-        <v-layout align-center justify-center>
-          <v-flex xs12 sm8 md4>
-            <v-card class="elevation-12">
-              <v-toolbar dark color="primary">
+
+          <v-flex xs12 sm8 md4 style="margin: 0 auto;">
+            <v-card class="elevation-12" >
+              <v-toolbar dark color="white" >
                 <v-toolbar-title>Login</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-tooltip bottom>
@@ -28,14 +25,10 @@
                 </v-form>
               </v-card-text>
               <v-card-actions>
-                <v-btn color="primary"  v-on:click="login" >Login</v-btn>
+                <v-btn color="blue" style="color:white" v-on:click="login" >Login</v-btn>
               </v-card-actions>
             </v-card>
           </v-flex>
-        </v-layout>
-      </v-container>
-    </v-content>
-  </v-app>
 </template>
 <script>
 export default{

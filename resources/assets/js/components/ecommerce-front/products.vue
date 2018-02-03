@@ -35,7 +35,7 @@
 	export default {
 		props: ['item'],
         methods: {
-            ...mapActions(['updateBag']),
+            ...mapActions(['updateBag','checkValue']),
             addItem() {
                 const cartHistroy = {
                     item: Object.assign({}, this.item),
@@ -43,6 +43,7 @@
                     itemOnList: true
                 };
                 this.updateBag(cartHistroy);
+                this.checkValue();
             }
         },
         filters: {

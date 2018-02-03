@@ -80,9 +80,15 @@
       data: () => ({
         dialog: false,
         items: [
+<<<<<<< HEAD
           { icon: 'contacts', text: 'Dashboard',url:"/admin" },
           { icon: 'dns', text: 'Product',url:"/product" },
           { icon: 'content_copy', text: 'Category Product',url:"/product-category" },
+=======
+          { icon: 'contacts', text: 'Dashboard',url:"/admin/home" },
+          { icon: 'dns', text: 'Product',url:"/admin/product" },
+          { icon: 'content_copy', text: 'Category Product',url:"/admin/product-category" },
+>>>>>>> 4a3bc6c830e94b9c9c9e819a66ea56d68cd761aa
           {
             icon: 'keyboard_arrow_up',
             'icon-alt': 'keyboard_arrow_down',

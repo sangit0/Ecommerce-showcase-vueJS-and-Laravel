@@ -7,7 +7,7 @@ import * as actions from './actions/action';
 Vue.use(Vuex)
 const state = {
   drawer: null,
-  shopping_cart_btn:null
+  shopping_cart_btn:null,
 }
 
 export default new Vuex.Store({

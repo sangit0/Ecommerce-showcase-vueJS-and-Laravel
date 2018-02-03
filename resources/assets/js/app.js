@@ -39,6 +39,7 @@ window.axios.defaults.headers.common = {
 
 const router = new VueRouter({ mode: 'history', routes: routes});
 
+<<<<<<< HEAD
 // router.beforeEach((to, from, next) => {
 //
 //   //Authorization
@@ -67,6 +68,33 @@ const router = new VueRouter({ mode: 'history', routes: routes});
 //   }
 // })
 //
+=======
+router.beforeEach((to, from, next) => {
+
+    //Authorization
+    axios.defaults.headers.common['Authorization'] = 'Bearer ' + Vue.auth.getToken();
+
+  if (to.matched.some(record => record.meta.visitors)) {
+    if (Vue.auth.isLoggedin()) {
+      next();
+    } else {
+      next();
+    }
+} else if (to.matched.some(record => record.meta.users)) {
+  if (!Vue.auth.isLoggedin()) {
+    next({
+      path: '/login',
+    });
+  } else {
+    next();
+  }
+}
+   else {
+    next();
+  }
+})
+
+>>>>>>> 4a3bc6c830e94b9c9c9e819a66ea56d68cd761aa
 
 new Vue({
   router,
