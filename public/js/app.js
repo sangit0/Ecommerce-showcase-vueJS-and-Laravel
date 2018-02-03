@@ -18209,7 +18209,11 @@ var render = function() {
       _vm._v(" "),
       _c("modalDialog", {
         attrs: { dialogParent: _vm.dialog },
-        on: { update: _vm.changeValue }
+        on: {
+          update: function($event) {
+            _vm.changeValue(false)
+          }
+        }
       })
     ],
     1

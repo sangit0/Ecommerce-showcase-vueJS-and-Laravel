@@ -3,7 +3,7 @@
   <v-layout row justify-center>
       <v-btn color="primary" @click="openDialog" dark slot="activator">Open Dialog</v-btn>
   </v-layout>
-  <modalDialog :dialogParent="dialog" @update="changeValue"></modalDialog>
+  <modalDialog :dialogParent="dialog" @update="changeValue(false)"></modalDialog>
 
 
   </div>
