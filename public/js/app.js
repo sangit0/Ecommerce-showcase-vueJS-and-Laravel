@@ -17904,7 +17904,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['dialogParent'],
+    props: ['dialogParent', 'title'],
+
     computed: {
         dialog: {
             get: function get() {
@@ -17952,9 +17953,7 @@ var render = function() {
         "v-card",
         [
           _c("v-card-title", [
-            _c("span", { staticClass: "headline" }, [
-              _vm._v("Category details")
-            ])
+            _c("span", { staticClass: "headline" }, [_vm._v(_vm._s(_vm.title))])
           ]),
           _vm._v(" "),
           _c("v-card-text", [_vm._t("default")], 2),
@@ -40066,7 +40065,7 @@ var render = function() {
       _c(
         "modalDialog",
         {
-          attrs: { dialogParent: _vm.dialog },
+          attrs: { dialogParent: _vm.dialog, title: "Category details" },
           on: {
             update: function($event) {
               _vm.changeValue(false)

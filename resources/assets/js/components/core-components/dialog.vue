@@ -2,7 +2,7 @@
      <v-dialog v-model="this.getValue()" persistent max-width="500px">
       <v-card>
         <v-card-title>
-          <span class="headline">Category details</span>
+          <span class="headline">{{title}}</span>
         </v-card-title>
         <v-card-text>
           <slot>
@@ -20,7 +20,8 @@
 
 <script>
   export default {
-    props: ['dialogParent'],
+    props: ['dialogParent','title'],
+
     computed: {
     dialog:{
         get: function () {

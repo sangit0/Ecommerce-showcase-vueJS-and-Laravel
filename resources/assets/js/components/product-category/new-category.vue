@@ -3,7 +3,7 @@
   <v-layout row justify-center>
       <v-btn color="primary" @click="openDialog" dark slot="activator">Add new category</v-btn>
   </v-layout>
-  <modalDialog :dialogParent="dialog" @update="changeValue(false)">
+  <modalDialog :dialogParent="dialog" :title="'Category details'" @update="changeValue(false)">
 
       <v-container grid-list-md>
         <v-layout wrap>
