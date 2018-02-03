@@ -20,15 +20,15 @@ import modalDialog from '../core-components/dialog.vue';
       }
     },
     components: {
-    modalDialog
+        modalDialog
     },
     methods: {
-    openDialog() {
-    this.dialog=true
-    },
-    changeValue(value){
-    this.dialog =value
-    }
+        openDialog() {
+            this.dialog=true
+        },
+        changeValue(value){
+            this.dialog =value
+        }
 }
 
   }

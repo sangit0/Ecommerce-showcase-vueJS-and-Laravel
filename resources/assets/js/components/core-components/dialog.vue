@@ -70,12 +70,12 @@
        }
     },
    methods: {
-   changeValue: function() {
-    this.dialog = false
-   },
-   getValue(){
-    return  this.dialog;
+       changeValue: function() {
+           this.dialog = false
+       },
+       getValue(){
+           return  this.dialog;
+       }
    }
-}
   }
 </script>

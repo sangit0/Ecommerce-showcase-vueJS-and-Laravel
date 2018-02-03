@@ -17824,23 +17824,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      dialog: false
-    };
-  },
-
-  components: {
-    modalDialog: __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue___default.a
-  },
-  methods: {
-    openDialog: function openDialog() {
-      this.dialog = true;
+    data: function data() {
+        return {
+            dialog: false
+        };
     },
-    changeValue: function changeValue(value) {
-      this.dialog = value;
+
+    components: {
+        modalDialog: __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue___default.a
+    },
+    methods: {
+        openDialog: function openDialog() {
+            this.dialog = true;
+        },
+        changeValue: function changeValue(value) {
+            this.dialog = value;
+        }
     }
-  }
 
 });
 
