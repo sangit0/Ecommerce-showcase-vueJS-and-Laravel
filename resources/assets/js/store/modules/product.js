@@ -8,7 +8,7 @@ const state = {
 			price: 999.9,
 			quantity: 10,
 			category: "iPhone",
-			descriptions: "iPhone X features a new all-screen design. Face ID, which makes your face your password. And the most powerful and smartest chip ever in a smartphone"
+			description: "iPhone X features a new all-screen design. Face ID, which makes your face your password. And the most powerful and smartest chip ever in a smartphone"
 		},{
 			id: 2,
 			title: 'iPhoneX ',
@@ -51,7 +51,7 @@ const actions = {
 
 }
 const mutations = {
-	
+
 }
 
 const getters = {

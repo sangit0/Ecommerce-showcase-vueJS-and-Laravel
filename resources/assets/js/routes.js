@@ -19,39 +19,20 @@ const routes = [
     },
     children: [
       {
-        path: '/home',
+        path: 'home',
         component: home
       },
       {
-        path: '/product',
+        path: 'product',
         component: product
       },
       {
         path: 'product-category',
         component: productcategory
-<<<<<<< HEAD
-      }]
-    },
-    {
-      name: 'Login',
-      path: '/login',
-      component: Login,
-      meta:{
-        visitors:true
       }
-    },
-    {
-      name: 'store',
-      path: '/',
-      component: store,
-      meta:{
-        visitors:true
-      }
-    }
-  ];
-=======
-    }]
-  },{
+]
+},
+{
   name: 'Login',
   path: '/login',
   component: Login,
@@ -76,6 +57,5 @@ const routes = [
  }
 }
 ];
->>>>>>> 4a3bc6c830e94b9c9c9e819a66ea56d68cd761aa
 
   export default routes;

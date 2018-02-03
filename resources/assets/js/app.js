@@ -8,9 +8,7 @@ import VueResource from 'vue-resource'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import Vuex from 'vuex'
-import store from './store' // path to your Vuex store
-import BootstrapVue from 'bootstrap-vue'
-
+import store from './store'; // path to your Vuex store
 
 Vue.use(store)
 Vue.use(Vuex)
@@ -18,10 +16,6 @@ Vue.use(Vuetify)
 Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(Auth)
-Vue.use(BootstrapVue)
-
-
-
 
 
 window.$ = jQuery
@@ -30,45 +24,15 @@ window.axios = require('axios')
 //base URL
 Vue.http.options.root="http://localhost:8000"
 
-window.axios.defaults.headers.common = {
-  'X-CSRF-TOKEN': window.Laravel.csrfToken,
-  'X-Requested-With': 'XMLHttpRequest'
+  window.axios.defaults.headers.common = {
+    'X-CSRF-TOKEN': window.Laravel.csrfToken,
+    'X-Requested-With': 'XMLHttpRequest'
 
 };
 
 
 const router = new VueRouter({ mode: 'history', routes: routes});
 
-<<<<<<< HEAD
-// router.beforeEach((to, from, next) => {
-//
-//   //Authorization
-//   axios.defaults.headers.common['Authorization'] = 'Bearer ' + Vue.auth.getToken();
-//
-//   if (to.matched.some(record => record.meta.visitors)) {
-//     if (Vue.auth.isLoggedin()) {
-//       next({
-//         path: '/home',
-//       });
-//     } else {
-//       next();
-//     }
-//   }
-//   else if (to.matched.some(record => record.meta.users)) {
-//     if (!Vue.auth.isLoggedin()) {
-//       next({
-//         path: '/login',
-//       });
-//     } else {
-//       next();
-//     }
-//   }
-//   else {
-//     next();
-//   }
-// })
-//
-=======
 router.beforeEach((to, from, next) => {
 
     //Authorization
@@ -94,11 +58,10 @@ router.beforeEach((to, from, next) => {
   }
 })
 
->>>>>>> 4a3bc6c830e94b9c9c9e819a66ea56d68cd761aa
 
 new Vue({
-  router,
-  components: {App},
-  template: '<App/>',
-  store,
+    router,
+    components: {App},
+    template: '<App/>',
+    store,
 }).$mount('#app');
