@@ -80,9 +80,9 @@
       data: () => ({
         dialog: false,
         items: [
-          { icon: 'contacts', text: 'Dashboard',url:"/" },
-          { icon: 'dns', text: 'Product',url:"/product" },
-          { icon: 'content_copy', text: 'Category Product',url:"/product-category" },
+          { icon: 'contacts', text: 'Dashboard',url:"/admin/home" },
+          { icon: 'dns', text: 'Product',url:"/admin/product" },
+          { icon: 'content_copy', text: 'Category Product',url:"/admin/product-category" },
           {
             icon: 'keyboard_arrow_up',
             'icon-alt': 'keyboard_arrow_down',
