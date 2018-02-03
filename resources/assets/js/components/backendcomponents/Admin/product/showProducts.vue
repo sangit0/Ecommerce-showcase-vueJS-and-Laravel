@@ -5,10 +5,10 @@
     <v-card>
       <p class="mt-3"></p>
       <div class="text-xs-center">
-      <v-btn round color="primary" dark>Add New Product</v-btn>
+      <v-btn round color="primary" dark  @click="addproduct">Add New Product</v-btn>
     </div>
       <v-card-title>
-        Nutrition
+        Showing All Products
         <v-spacer></v-spacer>
         <v-text-field
           append-icon="search"
@@ -28,7 +28,7 @@
           <td class="text-xs-center">{{ props.item.id }}</td>
           <td class="text-xs-center">{{ props.item.title }}</td>
           <td class="text-xs-center">{{ props.item.price }}</td>
-          <td class="text-xs-center">{{ props.item.quntity }}</td>
+          <td class="text-xs-center">{{ props.item.quantity }}</td>
           <td class="text-xs-center">{{ props.item.category }}</td>
 
         </template>
@@ -38,30 +38,38 @@
       </v-data-table>
     </v-card>
   </v-app>
+  <addProduct :openmodal='modalsAreaHidden'></addProduct>
 </div>
 </template>
 <script>
-import { mapActions } from 'vuex';
+
+let addProduct = require('./addProduct.vue');
 
 export default {
+  component:{addProduct},
     data () {
     return {
+      modalsAreaHidden: '',
       search: '',
       pagination: {},
       headers: [
         {
           text: 'ID',
-          align: 'left',
+          align: 'center',
           sortable: false,
           value: 'id'
         },
-        { text: 'Title', value: 'title' },
-        { text: 'Price', value: 'price' },
-        { text: 'Quantity', value: 'quantity' },
-        { text: 'Category', value: 'category' }
+        { text: 'Title',align: 'center', value: 'title' },
+        { text: 'Price',align: 'center', value: 'price' },
+        { text: 'Quantity',align: 'center', value: 'quantity' },
+        { text: 'Category',align: 'center', value: 'category' }
         ],
       items: this.$store.getters.products,
-      
+    }
+  },
+  methods: {
+    addproduct() {
+      this.modalsAreaHidden = 'modallg';
     }
   }
 }

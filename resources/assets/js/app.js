@@ -8,7 +8,9 @@ import VueResource from 'vue-resource'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import Vuex from 'vuex'
-import store from './store'; // path to your Vuex store
+import store from './store' // path to your Vuex store
+import BootstrapVue from 'bootstrap-vue'
+
 
 Vue.use(store)
 Vue.use(Vuex)
@@ -16,6 +18,10 @@ Vue.use(Vuetify)
 Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(Auth)
+Vue.use(BootstrapVue)
+
+
+
 
 
 window.$ = jQuery
