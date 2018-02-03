@@ -17807,13 +17807,8 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue__);
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__new_category_vue__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__new_category_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__new_category_vue__);
 //
 //
 //
@@ -17824,23 +17819,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            dialog: false
-        };
-    },
+  data: function data() {
+    return {};
+  },
 
-    components: {
-        modalDialog: __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue___default.a
-    },
-    methods: {
-        openDialog: function openDialog() {
-            this.dialog = true;
-        },
-        changeValue: function changeValue(value) {
-            this.dialog = value;
-        }
-    }
+  components: {
+    newCategory: __WEBPACK_IMPORTED_MODULE_0__new_category_vue___default.a
+  }
 
 });
 
@@ -17917,42 +17902,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['dialogParent'],
@@ -18003,139 +17952,12 @@ var render = function() {
         "v-card",
         [
           _c("v-card-title", [
-            _c("span", { staticClass: "headline" }, [_vm._v("User Profile")])
+            _c("span", { staticClass: "headline" }, [
+              _vm._v("Category details")
+            ])
           ]),
           _vm._v(" "),
-          _c(
-            "v-card-text",
-            [
-              _c(
-                "v-container",
-                { attrs: { "grid-list-md": "" } },
-                [
-                  _c(
-                    "v-layout",
-                    { attrs: { wrap: "" } },
-                    [
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm6: "", md4: "" } },
-                        [
-                          _c("v-text-field", {
-                            attrs: { label: "Legal first name", required: "" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm6: "", md4: "" } },
-                        [
-                          _c("v-text-field", {
-                            attrs: {
-                              label: "Legal middle name",
-                              hint: "example of helper text only on focus"
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm6: "", md4: "" } },
-                        [
-                          _c("v-text-field", {
-                            attrs: {
-                              label: "Legal last name",
-                              hint: "example of persistent helper text",
-                              "persistent-hint": "",
-                              required: ""
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "" } },
-                        [
-                          _c("v-text-field", {
-                            attrs: { label: "Email", required: "" }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "" } },
-                        [
-                          _c("v-text-field", {
-                            attrs: {
-                              label: "Password",
-                              type: "password",
-                              required: ""
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm6: "" } },
-                        [
-                          _c("v-select", {
-                            attrs: {
-                              label: "Age",
-                              required: "",
-                              items: ["0-17", "18-29", "30-54", "54+"]
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-flex",
-                        { attrs: { xs12: "", sm6: "" } },
-                        [
-                          _c("v-select", {
-                            attrs: {
-                              label: "Interests",
-                              multiple: "",
-                              autocomplete: "",
-                              chips: "",
-                              items: [
-                                "Skiing",
-                                "Ice hockey",
-                                "Soccer",
-                                "Basketball",
-                                "Hockey",
-                                "Reading",
-                                "Writing",
-                                "Coding",
-                                "Basejump"
-                              ]
-                            }
-                          })
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("small", [_vm._v("*indicates required field")])
-            ],
-            1
-          ),
+          _c("v-card-text", [_vm._t("default")], 2),
           _vm._v(" "),
           _c(
             "v-card-actions",
@@ -18187,37 +18009,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "v-layout",
-        { attrs: { row: "", "justify-center": "" } },
-        [
-          _c(
-            "v-btn",
-            {
-              attrs: { slot: "activator", color: "primary", dark: "" },
-              on: { click: _vm.openDialog },
-              slot: "activator"
-            },
-            [_vm._v("Open Dialog")]
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("modalDialog", {
-        attrs: { dialogParent: _vm.dialog },
-        on: {
-          update: function($event) {
-            _vm.changeValue(false)
-          }
-        }
-      })
-    ],
-    1
-  )
+  return _c("div", [_c("newCategory")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -40129,6 +39921,212 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(127)
+/* template */
+var __vue_template__ = __webpack_require__(128)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/product-category/new-category.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-3b3b9fd2", Component.options)
+  } else {
+    hotAPI.reload("data-v-3b3b9fd2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 127 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            dialog: false
+        };
+    },
+
+    components: {
+        modalDialog: __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue___default.a
+    },
+    methods: {
+        openDialog: function openDialog() {
+            this.dialog = true;
+        },
+        changeValue: function changeValue(value) {
+            this.dialog = value;
+        }
+    }
+
+});
+
+/***/ }),
+/* 128 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-layout",
+        { attrs: { row: "", "justify-center": "" } },
+        [
+          _c(
+            "v-btn",
+            {
+              attrs: { slot: "activator", color: "primary", dark: "" },
+              on: { click: _vm.openDialog },
+              slot: "activator"
+            },
+            [_vm._v("Add new category")]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "modalDialog",
+        {
+          attrs: { dialogParent: _vm.dialog },
+          on: {
+            update: function($event) {
+              _vm.changeValue(false)
+            }
+          }
+        },
+        [
+          _c(
+            "v-container",
+            { attrs: { "grid-list-md": "" } },
+            [
+              _c(
+                "v-layout",
+                { attrs: { wrap: "" } },
+                [
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "" } },
+                    [
+                      _c("v-text-field", {
+                        attrs: { label: "Category Name", required: "" }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-flex",
+                    { attrs: { xs12: "" } },
+                    [
+                      _c("v-text-field", {
+                        attrs: { label: "Description", required: "" }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("small", [_vm._v("*indicates required field")])
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-3b3b9fd2", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

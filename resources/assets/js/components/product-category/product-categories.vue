@@ -1,35 +1,20 @@
 <template>
     <div>
-  <v-layout row justify-center>
-      <v-btn color="primary" @click="openDialog" dark slot="activator">Open Dialog</v-btn>
-  </v-layout>
-  <modalDialog :dialogParent="dialog" @update="changeValue(false)"></modalDialog>
-
-
-  </div>
+        <newCategory></newCategory>
+    </div>
 </template>
 
 <script>
-import modalDialog from '../core-components/dialog.vue';
+import newCategory from './new-category.vue';
 
   export default {
-
     data () {
       return {
-          dialog:false
       }
     },
     components: {
-        modalDialog
-    },
-    methods: {
-        openDialog() {
-            this.dialog=true
-        },
-        changeValue(value){
-            this.dialog =value
-        }
-}
+        newCategory
+    }
 
   }
 </script>
