@@ -33,30 +33,30 @@ Vue.http.options.root="http://localhost:8000"
 
 const router = new VueRouter({ mode: 'history', routes: routes});
 
-// router.beforeEach((to, from, next) => {
-//
-//     //Authorization
-//     axios.defaults.headers.common['Authorization'] = 'Bearer ' + Vue.auth.getToken();
-//
-//   if (to.matched.some(record => record.meta.visitors)) {
-//     if (Vue.auth.isLoggedin()) {
-//       next();
-//     } else {
-//       next();
-//     }
-// } else if (to.matched.some(record => record.meta.users)) {
-//   if (!Vue.auth.isLoggedin()) {
-//     next({
-//       path: '/login',
-//     });
-//   } else {
-//     next();
-//   }
-// }
-//    else {
-//     next();
-//   }
-// })
+router.beforeEach((to, from, next) => {
+
+    //Authorization
+    axios.defaults.headers.common['Authorization'] = 'Bearer ' + Vue.auth.getToken();
+
+  if (to.matched.some(record => record.meta.visitors)) {
+    if (Vue.auth.isLoggedin()) {
+      next();
+    } else {
+      next();
+    }
+} else if (to.matched.some(record => record.meta.users)) {
+  if (!Vue.auth.isLoggedin()) {
+    next({
+      path: '/login',
+    });
+  } else {
+    next();
+  }
+}
+   else {
+    next();
+  }
+})
 
 
 new Vue({
