@@ -17,7 +17,8 @@
     "cross-env": "^5.1",
     "jquery": "^3.2",
     "laravel-mix": "^1.0",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "vue-easytable": "^1.7.0"
   },
   "dependencies": {
     "axios": "^0.17.1",
