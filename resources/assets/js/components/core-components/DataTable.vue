@@ -1,55 +1,69 @@
 <template>
   <div id="">
-    <table id=""  >
-      <thead>
-        <tr>
-          <th v-for="col in columns">{{col}}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="row in rows">
-          <td v-for="col in columns">{{row[col]}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <md-table v-model="searched" md-sort="name" md-sort-order="asc" md-card md-fixed-header>
+      <md-table-toolbar>
+        <div class="md-toolbar-section-start">
+          <h1 class="md-title">{{title}}</h1>
+        </div>
+
+        <md-field md-clearable class="md-toolbar-section-end">
+          <md-input placeholder="Search by name..." v-model="search" @input="searchOnTable" />
+        </md-field>
+      </md-table-toolbar>
+      <!--
+      <md-table-empty-state md-label="No User found" :md-description="`No user found for this '${search}' query. Try a different search term or create a new user.`">
+    </md-table-empty-state>
+  -->
+  <md-table-row>
+    <md-table-head  v-for="col in columns"  :key="col.key">{{col}}</md-table-head>
+  </md-table-row>
+
+  <md-table-row v-for="row in rows" :key="row.key">
+    <md-table-cell v-for="col in columns" :key="col.key">{{row[col]}}</md-table-cell>
+  </md-table-row>
+
+</md-table>
+
+</div>
 </template>
+
 <script>
 export default {
-  props: ['rows', 'columns'],
-  name: "",
-
+  props: ['rows', 'columns', 'title'],
+  name: "TableSearch",
+  data(){
+    return{
+      search: null,
+      searched: [],
+      users: this.rows
+    }
+  },
+  methods: {
+    searchOnTable() {
+      this.searched = searchByName(this.users, this.search)
+    },
+    toLower(text) {
+      return text.toString().toLowerCase()
+    },
+    searchByName(items, term) {
+      if (term) {
+        return items.filter(function(item) {
+          return toLower(item.name).includes(toLower(term))
+        })
+      }
+    }
+  },
+  created() {
+    this.searched = this.users
+  }
 }
 </script>
 <style lang="scss" scoped>
-table {
-  font-family: 'Open Sans', sans-serif;
-  width: 750px;
-  border-collapse: collapse;
-  border: 3px solid #44475C;
-  margin: 10px 10px 0 10px;
+.md-field {
+  max-width: 300px;
 }
-
-table th {
-  text-transform: uppercase;
-  text-align: left;
-  background: #44475C;
-  color: #FFF;
-  padding: 8px;
-  min-width: 30px;
+.md-table{
+  padding: 20px;
 }
-
-table td {
-  text-align: left;
-  padding: 8px;
-  border-right: 2px solid #7D82A8;
-}
-table td:last-child {
-  border-right: none;
-}
-table tbody tr:nth-child(2n) td {
-  background: #D4D8F9;
-}
-
 
 </style>

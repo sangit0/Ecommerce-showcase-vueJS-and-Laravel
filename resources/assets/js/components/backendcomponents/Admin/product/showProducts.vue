@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <productTable :rows="items"  :columns="columns" ></productTable>
+    <productTable :rows="items"  :columns="columns"  :title="tableTitle"></productTable>
   </div>
 </template>
 <script>
@@ -13,7 +13,7 @@ export default {
 data(){
   return{
     columns: ['id', 'title', 'price', 'quantity' ],
-
+    tableTitle: 'Product Table',
     items: this.$store.getters.products,
   }
 }

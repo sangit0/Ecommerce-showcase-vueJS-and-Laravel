@@ -9,6 +9,8 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import Vuex from 'vuex'
 import store from './store'; // path to your Vuex store
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
 
 Vue.use(store)
 Vue.use(Vuex)
@@ -16,6 +18,7 @@ Vue.use(Vuetify)
 Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(Auth)
+Vue.use(VueMaterial)
 
 
 window.$ = jQuery
@@ -33,30 +36,30 @@ Vue.http.options.root="http://localhost:8000"
 
 const router = new VueRouter({ mode: 'history', routes: routes});
 
-router.beforeEach((to, from, next) => {
-
-    //Authorization
-    axios.defaults.headers.common['Authorization'] = 'Bearer ' + Vue.auth.getToken();
-
-  if (to.matched.some(record => record.meta.visitors)) {
-    if (Vue.auth.isLoggedin()) {
-      next();
-    } else {
-      next();
-    }
-} else if (to.matched.some(record => record.meta.users)) {
-  if (!Vue.auth.isLoggedin()) {
-    next({
-      path: '/login',
-    });
-  } else {
-    next();
-  }
-}
-   else {
-    next();
-  }
-})
+// router.beforeEach((to, from, next) => {
+//
+//     //Authorization
+//     axios.defaults.headers.common['Authorization'] = 'Bearer ' + Vue.auth.getToken();
+//
+//   if (to.matched.some(record => record.meta.visitors)) {
+//     if (Vue.auth.isLoggedin()) {
+//       next();
+//     } else {
+//       next();
+//     }
+// } else if (to.matched.some(record => record.meta.users)) {
+//   if (!Vue.auth.isLoggedin()) {
+//     next({
+//       path: '/login',
+//     });
+//   } else {
+//     next();
+//   }
+// }
+//    else {
+//     next();
+//   }
+// })
 
 
 new Vue({
