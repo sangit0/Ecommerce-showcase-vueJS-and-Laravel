@@ -8,7 +8,7 @@ import VueResource from 'vue-resource'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import Vuex from 'vuex'
-import store from './store'  // path to your Vuex store
+import store from './store'   // path to your Vuex store
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
 
