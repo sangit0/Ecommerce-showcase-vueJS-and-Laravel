@@ -7,20 +7,18 @@
         </div>
 
         <md-field md-clearable class="md-toolbar-section-end">
-          <md-input placeholder="Search by name..." v-model="search" @input="searchOnTable" />
+          <md-input placeholder="Search by product..." v-model="search" @input="searchOnTable" />
         </md-field>
       </md-table-toolbar>
-      <!--
-      <md-table-empty-state md-label="No User found" :md-description="`No user found for this '${search}' query. Try a different search term or create a new user.`">
-    </md-table-empty-state>
-  -->
-  <md-table-row>
-    <md-table-head  v-for="col in columns"  :key="col.key">{{col}}</md-table-head>
-  </md-table-row>
+      <md-table-empty-state
+         md-label="No Product found"
+         :md-description="`No Product found for this '${search}' query. Try a different search term or create a new user.`">
+       </md-table-empty-state>
 
-  <md-table-row v-for="row in rows" :key="row.key">
-    <md-table-cell v-for="col in columns" :key="col.key">{{row[col]}}</md-table-cell>
-  </md-table-row>
+
+  <md-table-row slot="md-table-row" slot-scope="{ item }">
+      <md-table-cell v-for="col in columns" :key="col.key" :md-label="col">{{item[col]}}</md-table-cell>
+   </md-table-row>
 
 </md-table>
 
@@ -28,6 +26,15 @@
 </template>
 
 <script>
+const toLower = text => {
+   return text.toString().toLowerCase()
+ }
+ const searchByName = (items, term) => {
+   if (term) {
+     return items.filter(item => toLower(item.title).includes(toLower(term)))
+   }
+   return items
+ }
 export default {
   props: ['rows', 'columns', 'title'],
   name: "TableSearch",
@@ -41,18 +48,8 @@ export default {
   methods: {
     searchOnTable() {
       this.searched = searchByName(this.users, this.search)
-    },
-    toLower(text) {
-      return text.toString().toLowerCase()
-    },
-    searchByName(items, term) {
-      if (term) {
-        return items.filter(function(item) {
-          return toLower(item.name).includes(toLower(term))
-        })
-      }
-    }
-  },
+  }
+},
   created() {
     this.searched = this.users
   }
@@ -65,5 +62,4 @@ export default {
 .md-table{
   padding: 20px;
 }
-
 </style>

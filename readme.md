@@ -13,6 +13,12 @@ TechStack
   - Browserify
   - webpack
   - laravel mix
+# Screenshot
+![alt text](https://github.com/sangit0/Ecommerce-showcase-vueJS-and-Laravel/blob/master/screenshot/5.png "Screenshot")
+![alt text](https://github.com/sangit0/Ecommerce-showcase-vueJS-and-Laravel/blob/master/screenshot/1.png "Screenshot")
+![alt text](https://github.com/sangit0/Ecommerce-showcase-vueJS-and-Laravel/blob/master/screenshot/2.png "Screenshot")
+![alt text](https://github.com/sangit0/Ecommerce-showcase-vueJS-and-Laravel/blob/master/screenshot/3.png "Screenshot")
+![alt text](https://github.com/sangit0/Ecommerce-showcase-vueJS-and-Laravel/blob/master/screenshot/4.png "Screenshot")
 
 ## About Laravel
 
