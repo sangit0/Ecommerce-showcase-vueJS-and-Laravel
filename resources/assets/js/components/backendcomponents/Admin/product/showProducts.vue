@@ -9,7 +9,6 @@
           <v-layout wrap>
             <v-flex xs12 sm4 >
               <v-text-field label="Product Title" required :value="product.title" v-on:keyup.stop="addProductField('title', $event.target.value)"></v-text-field>
-
             </v-flex>
             <v-flex xs12 sm4 >
               <v-text-field label="Product Price" :value="product.price" v-on:keyup.stop="addProductField('price', $event.target.value)" ></v-text-field>
