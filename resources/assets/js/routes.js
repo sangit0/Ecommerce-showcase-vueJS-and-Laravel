@@ -2,7 +2,7 @@ import Vue from 'vue'
 import dash from './components/backEndComponents/layoutdash.vue'
 import home from './components/backEndComponents/Admin/dashboard.vue'
 import product from './components/backEndComponents/Admin/product/showProducts.vue'
-import productcategory from './components/product-category/product-categories.vue'
+import productcategory from './components/backendcomponents/Admin/product-category/product-categories.vue'
 import store from './components/ecommerce-front/store.vue'
 import checkout from './components/ecommerce-front/checkout.vue'
 

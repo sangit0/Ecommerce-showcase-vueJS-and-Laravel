@@ -1,20 +1,17 @@
 <template>
   <div id="container">
-    <v-layout row justify-center>
-      <v-btn color="primary" @click="openDialog" dark slot="activator">Open Dialog</v-btn>
-    </v-layout>
-    <modalDialog :dialogParent="dialog" @update="changeValue"></modalDialog>
+    <newProduct></newProduct>
     <productTable :rows="items"  :columns="columns"  :title="tableTitle"></productTable>
   </div>
 </template>
 <script>
 
-import modalDialog from './addProduct.vue';
+import newProduct from './addProduct.vue';
 
 import productTable from '../../../core-components/DataTable.vue';
 export default {
   components: {
-    productTable, modalDialog
+    productTable, newProduct
   },
   data(){
     return{

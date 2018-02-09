@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import modalDialog from '../core-components/dialog.vue';
+import modalDialog from '../../../core-components/dialog.vue';
 
   export default {
 

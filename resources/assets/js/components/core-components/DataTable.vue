@@ -28,6 +28,17 @@
 </template>
 
 <script>
+const toLower = text => {
+    return text.toString().toLowerCase()
+  }
+
+  const searchByName = (items, term) => {
+    if (term) {
+      return items.filter(item => toLower(item.name).includes(toLower(term)))
+    }
+
+    return items
+  }
 export default {
   props: ['rows', 'columns', 'title'],
   name: "TableSearch",
@@ -41,16 +52,6 @@ export default {
   methods: {
     searchOnTable() {
       this.searched = searchByName(this.users, this.search)
-    },
-    toLower(text) {
-      return text.toString().toLowerCase()
-    },
-    searchByName(items, term) {
-      if (term) {
-        return items.filter(function(item) {
-          return toLower(item.name).includes(toLower(term))
-        })
-      }
     }
   },
   created() {
