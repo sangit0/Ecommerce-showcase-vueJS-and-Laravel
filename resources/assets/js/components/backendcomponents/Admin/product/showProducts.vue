@@ -19,7 +19,6 @@
             <v-flex xs12  >
               <v-text-field label="Product Description" :value="product.description" v-on:keyup.stop="addProductField('description', $event.target.value)"></v-text-field>
             </v-flex>
-
             <v-flex xs12>
               <v-select
                 label="Product Category"
