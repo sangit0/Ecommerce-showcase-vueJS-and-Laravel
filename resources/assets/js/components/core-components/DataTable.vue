@@ -29,23 +29,12 @@
 const toLower = text => {
    return text.toString().toLowerCase()
  }
-<<<<<<< HEAD
-
-=======
->>>>>>> 010dbfb89f2898eae94b5e329fe830d2dbecabc8
  const searchByName = (items, term) => {
    if (term) {
      return items.filter(item => toLower(item.title).includes(toLower(term)))
    }
-<<<<<<< HEAD
-
    return items
  }
-
-=======
-   return items
- }
->>>>>>> 010dbfb89f2898eae94b5e329fe830d2dbecabc8
 export default {
   props: ['rows', 'columns', 'title'],
   name: "TableSearch",
