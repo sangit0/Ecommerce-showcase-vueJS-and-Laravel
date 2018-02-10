@@ -51,7 +51,9 @@ const actions = {
 
 }
 const mutations = {
-
+	addNewProduct: function (state, product) {
+	      Object.assign(state.productList, product);
+	    }
 }
 
 const getters = {
