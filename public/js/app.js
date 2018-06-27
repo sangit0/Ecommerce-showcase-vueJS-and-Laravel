@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -179,7 +179,7 @@ module.exports = function normalizeComponent (
 "use strict";
 
 
-var bind = __webpack_require__(12);
+var bind = __webpack_require__(13);
 var isBuffer = __webpack_require__(111);
 
 /*global toString:true*/
@@ -584,7 +584,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(25)
+var listToStyles = __webpack_require__(26)
 
 /*
 type StyleObject = {
@@ -12552,7 +12552,7 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(19).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(20).setImmediate))
 
 /***/ }),
 /* 6 */
@@ -12605,10 +12605,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(13);
+    adapter = __webpack_require__(14);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(13);
+    adapter = __webpack_require__(14);
   }
   return adapter;
 }
@@ -12876,15 +12876,62 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(54)
+/* template */
+var __vue_template__ = __webpack_require__(55)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/core-components/dialog.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-84b8f5ec", Component.options)
+  } else {
+    hotAPI.reload("data-v-84b8f5ec", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(54)
+  __webpack_require__(57)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(56)
+var __vue_script__ = __webpack_require__(59)
 /* template */
-var __vue_template__ = __webpack_require__(57)
+var __vue_template__ = __webpack_require__(60)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -12923,7 +12970,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -12974,7 +13021,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -13346,7 +13393,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13364,7 +13411,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13375,7 +13422,7 @@ var settle = __webpack_require__(114);
 var buildURL = __webpack_require__(116);
 var parseHeaders = __webpack_require__(117);
 var isURLSameOrigin = __webpack_require__(118);
-var createError = __webpack_require__(14);
+var createError = __webpack_require__(15);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(119);
 
 module.exports = function xhrAdapter(config) {
@@ -13551,7 +13598,7 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13576,7 +13623,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13588,7 +13635,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13614,25 +13661,25 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(18);
+__webpack_require__(19);
 module.exports = __webpack_require__(128);
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_vue__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_vue__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__app_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_js__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes_js__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__packages_auth_js__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_resource__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_vuetify__ = __webpack_require__(97);
@@ -13715,7 +13762,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 }).$mount('#app');
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var apply = Function.prototype.apply;
@@ -13768,7 +13815,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(20);
+__webpack_require__(21);
 // On some exotic environments, it's not clear which object `setimmeidate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -13782,7 +13829,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -13975,7 +14022,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6), __webpack_require__(8)))
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16605,19 +16652,19 @@ if (inBrowser && window.Vue) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(23)
+  __webpack_require__(24)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(26)
+var __vue_script__ = __webpack_require__(27)
 /* template */
-var __vue_template__ = __webpack_require__(27)
+var __vue_template__ = __webpack_require__(28)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -16656,13 +16703,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(24);
+var content = __webpack_require__(25);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -16682,7 +16729,7 @@ if(false) {
 }
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -16696,7 +16743,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports) {
 
 /**
@@ -16729,7 +16776,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16748,7 +16795,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -16768,19 +16815,19 @@ if (false) {
 }
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_backEndComponents_layoutdash_vue__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_backEndComponents_layoutdash_vue__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_backEndComponents_layoutdash_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_backEndComponents_layoutdash_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_backEndComponents_Admin_dashboard_vue__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_backEndComponents_Admin_dashboard_vue__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_backEndComponents_Admin_dashboard_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_backEndComponents_Admin_dashboard_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_backEndComponents_Admin_product_showProducts_vue__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_backEndComponents_Admin_product_showProducts_vue__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_backEndComponents_Admin_product_showProducts_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_backEndComponents_Admin_product_showProducts_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_backendcomponents_Admin_product_category_product_categories_vue__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_backendcomponents_Admin_product_category_product_categories_vue__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_backendcomponents_Admin_product_category_product_categories_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_backendcomponents_Admin_product_category_product_categories_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_ecommerce_front_store_vue__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_ecommerce_front_store_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_ecommerce_front_store_vue__);
@@ -16841,19 +16888,19 @@ var routes = [{
 /* harmony default export */ __webpack_exports__["a"] = (routes);
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(30)
+  __webpack_require__(31)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(32)
+var __vue_script__ = __webpack_require__(33)
 /* template */
-var __vue_template__ = __webpack_require__(43)
+var __vue_template__ = __webpack_require__(44)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -16892,13 +16939,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(31);
+var content = __webpack_require__(32);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -16918,7 +16965,7 @@ if(false) {
 }
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -16932,14 +16979,14 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Admin_layouts_headerComponents_vue__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Admin_layouts_headerComponents_vue__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Admin_layouts_headerComponents_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Admin_layouts_headerComponents_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Admin_layouts_leftSideBar_vue__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Admin_layouts_leftSideBar_vue__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Admin_layouts_leftSideBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Admin_layouts_leftSideBar_vue__);
 //
 //
@@ -16973,19 +17020,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(34)
+  __webpack_require__(35)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(36)
+var __vue_script__ = __webpack_require__(37)
 /* template */
-var __vue_template__ = __webpack_require__(37)
+var __vue_template__ = __webpack_require__(38)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -17024,13 +17071,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(35);
+var content = __webpack_require__(36);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17050,7 +17097,7 @@ if(false) {
 }
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -17064,7 +17111,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17112,7 +17159,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -17197,19 +17244,19 @@ if (false) {
 }
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(39)
+  __webpack_require__(40)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(41)
+var __vue_script__ = __webpack_require__(42)
 /* template */
-var __vue_template__ = __webpack_require__(42)
+var __vue_template__ = __webpack_require__(43)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -17248,13 +17295,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(40);
+var content = __webpack_require__(41);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17274,7 +17321,7 @@ if(false) {
 }
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -17288,7 +17335,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17387,7 +17434,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -17604,7 +17651,7 @@ if (false) {
 }
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -17635,15 +17682,15 @@ if (false) {
 }
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(45)
+var __vue_script__ = __webpack_require__(46)
 /* template */
-var __vue_template__ = __webpack_require__(46)
+var __vue_template__ = __webpack_require__(47)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -17682,7 +17729,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17700,7 +17747,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -17720,19 +17767,19 @@ if (false) {
 }
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(48)
+  __webpack_require__(49)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(50)
+var __vue_script__ = __webpack_require__(51)
 /* template */
-var __vue_template__ = __webpack_require__(58)
+var __vue_template__ = __webpack_require__(61)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -17771,13 +17818,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(49);
+var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17797,28 +17844,20 @@ if(false) {
 }
 
 /***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 50 */
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(2)(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
+throw new Error("Module build failed: Error: Missing binding /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/node-sass/vendor/darwin-x64-59/binding.node\nNode Sass could not find a binding for your current environment: OS X 64-bit with Node.js 9.x\n\nFound bindings for the following environments:\n  - OS X 64-bit with Node.js 6.x\n\nThis usually happens because your environment has changed since running `npm install`.\nRun `npm rebuild node-sass --force` to build the binding for your current environment.\n    at module.exports (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/node-sass/lib/binding.js:15:13)\n    at Object.<anonymous> (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/node-sass/lib/index.js:14:35)\n    at Module._compile (module.js:649:30)\n    at Object.Module._extensions..js (module.js:660:10)\n    at Module.load (module.js:561:32)\n    at tryModuleLoad (module.js:501:12)\n    at Function.Module._load (module.js:493:3)\n    at Module.require (module.js:593:17)\n    at require (internal/module.js:11:18)\n    at Object.<anonymous> (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/sass-loader/lib/loader.js:3:14)\n    at Module._compile (module.js:649:30)\n    at Object.Module._extensions..js (module.js:660:10)\n    at Module.load (module.js:561:32)\n    at tryModuleLoad (module.js:501:12)\n    at Function.Module._load (module.js:493:3)\n    at Module.require (module.js:593:17)\n    at require (internal/module.js:11:18)\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:13:17)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModule.js:182:3)\n    at NormalModule.build (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModule.js:275:15)\n    at Compilation.buildModule (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:151:10)\n    at factoryCallback (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:344:12)\n    at NormalModuleFactory.create (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModuleFactory.js:214:25)\n    at semaphore.acquire (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:242:13)\n    at Semaphore.acquire (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/util/Semaphore.js:16:4)\n    at iteratorFactory (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:238:14)");
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__addProduct_vue__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__addProduct_vue__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__addProduct_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__addProduct_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_components_DataTable_vue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_components_DataTable_vue__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_components_DataTable_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__core_components_DataTable_vue__);
 //
 //
@@ -17845,15 +17884,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(52)
+var __vue_script__ = __webpack_require__(53)
 /* template */
-var __vue_template__ = __webpack_require__(53)
+var __vue_template__ = __webpack_require__(56)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -17892,12 +17931,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -17994,7 +18033,131 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 });
 
 /***/ }),
-/* 53 */
+/* 54 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['dialogParent', 'title'],
+
+    computed: {
+        dialog: {
+            get: function get() {
+                return JSON.parse(this.dialogParent);
+            },
+            set: function set(value) {
+                //this.dialog =value;
+                //console.log(value);
+                this.$emit('update', value);
+            }
+        }
+    },
+    methods: {
+        changeValue: function changeValue() {
+            this.dialog = false;
+        },
+        getValue: function getValue() {
+            return this.dialog;
+        }
+    }
+});
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-dialog",
+    {
+      attrs: { persistent: "", "max-width": "800px" },
+      model: {
+        value: this.getValue(),
+        callback: function($$v) {
+          _vm.$set(this, "getValue()", $$v)
+        },
+        expression: "this.getValue()"
+      }
+    },
+    [
+      _c(
+        "v-card",
+        [
+          _c("v-card-title", [
+            _c("span", { staticClass: "headline" }, [_vm._v(_vm._s(_vm.title))])
+          ]),
+          _vm._v(" "),
+          _c("v-card-text", [_vm._t("default")], 2),
+          _vm._v(" "),
+          _c(
+            "v-card-actions",
+            [
+              _c("v-spacer"),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: { color: "blue darken-1", flat: "" },
+                  on: { click: _vm.changeValue }
+                },
+                [_vm._v("Close")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: { color: "blue darken-1", flat: "" },
+                  on: { click: _vm.changeValue }
+                },
+                [_vm._v("Save")]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-84b8f5ec", module.exports)
+  }
+}
+
+/***/ }),
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -18186,13 +18349,13 @@ if (false) {
 }
 
 /***/ }),
-/* 54 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(55);
+var content = __webpack_require__(58);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -18212,21 +18375,13 @@ if(false) {
 }
 
 /***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 58 */
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__(2)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.md-field[data-v-dbd3155c] {\n  max-width: 300px;\n}\n.md-table[data-v-dbd3155c] {\n  padding: 20px;\n}\n", ""]);
-
-// exports
-
+throw new Error("Module build failed: Error: Missing binding /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/node-sass/vendor/darwin-x64-59/binding.node\nNode Sass could not find a binding for your current environment: OS X 64-bit with Node.js 9.x\n\nFound bindings for the following environments:\n  - OS X 64-bit with Node.js 6.x\n\nThis usually happens because your environment has changed since running `npm install`.\nRun `npm rebuild node-sass --force` to build the binding for your current environment.\n    at module.exports (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/node-sass/lib/binding.js:15:13)\n    at Object.<anonymous> (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/node-sass/lib/index.js:14:35)\n    at Module._compile (module.js:649:30)\n    at Object.Module._extensions..js (module.js:660:10)\n    at Module.load (module.js:561:32)\n    at tryModuleLoad (module.js:501:12)\n    at Function.Module._load (module.js:493:3)\n    at Module.require (module.js:593:17)\n    at require (internal/module.js:11:18)\n    at Object.<anonymous> (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/sass-loader/lib/loader.js:3:14)\n    at Module._compile (module.js:649:30)\n    at Object.Module._extensions..js (module.js:660:10)\n    at Module.load (module.js:561:32)\n    at tryModuleLoad (module.js:501:12)\n    at Function.Module._load (module.js:493:3)\n    at Module.require (module.js:593:17)\n    at require (internal/module.js:11:18)\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:13:17)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModule.js:182:3)\n    at NormalModule.build (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModule.js:275:15)\n    at Compilation.buildModule (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:151:10)\n    at factoryCallback (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:344:12)\n    at NormalModuleFactory.create (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModuleFactory.js:214:25)\n    at semaphore.acquire (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:242:13)\n    at Semaphore.acquire (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/util/Semaphore.js:16:4)\n    at iteratorFactory (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:238:14)");
 
 /***/ }),
-/* 56 */
+/* 59 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18293,7 +18448,7 @@ var searchByName = function searchByName(items, term) {
 });
 
 /***/ }),
-/* 57 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -18402,7 +18557,7 @@ if (false) {
 }
 
 /***/ }),
-/* 58 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -18433,13 +18588,13 @@ if (false) {
 }
 
 /***/ }),
-/* 59 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(60)
+var __vue_script__ = __webpack_require__(63)
 /* template */
 var __vue_template__ = __webpack_require__(67)
 /* template functional */
@@ -18480,14 +18635,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 60 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__new_category_vue__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__new_category_vue__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__new_category_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__new_category_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_components_DataTable_vue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_components_DataTable_vue__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_components_DataTable_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__core_components_DataTable_vue__);
 //
 //
@@ -18519,13 +18674,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 61 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(62)
+var __vue_script__ = __webpack_require__(65)
 /* template */
 var __vue_template__ = __webpack_require__(66)
 /* template functional */
@@ -18566,12 +18721,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 62 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__core_components_dialog_vue__);
 //
 //
@@ -18623,177 +18778,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     }
 
 });
-
-/***/ }),
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(0)
-/* script */
-var __vue_script__ = __webpack_require__(64)
-/* template */
-var __vue_template__ = __webpack_require__(65)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/core-components/dialog.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-84b8f5ec", Component.options)
-  } else {
-    hotAPI.reload("data-v-84b8f5ec", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 64 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['dialogParent', 'title'],
-
-    computed: {
-        dialog: {
-            get: function get() {
-                return JSON.parse(this.dialogParent);
-            },
-            set: function set(value) {
-                //this.dialog =value;
-                //console.log(value);
-                this.$emit('update', value);
-            }
-        }
-    },
-    methods: {
-        changeValue: function changeValue() {
-            this.dialog = false;
-        },
-        getValue: function getValue() {
-            return this.dialog;
-        }
-    }
-});
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-dialog",
-    {
-      attrs: { persistent: "", "max-width": "800px" },
-      model: {
-        value: this.getValue(),
-        callback: function($$v) {
-          _vm.$set(this, "getValue()", $$v)
-        },
-        expression: "this.getValue()"
-      }
-    },
-    [
-      _c(
-        "v-card",
-        [
-          _c("v-card-title", [
-            _c("span", { staticClass: "headline" }, [_vm._v(_vm._s(_vm.title))])
-          ]),
-          _vm._v(" "),
-          _c("v-card-text", [_vm._t("default")], 2),
-          _vm._v(" "),
-          _c(
-            "v-card-actions",
-            [
-              _c("v-spacer"),
-              _vm._v(" "),
-              _c(
-                "v-btn",
-                {
-                  attrs: { color: "blue darken-1", flat: "" },
-                  on: { click: _vm.changeValue }
-                },
-                [_vm._v("Close")]
-              ),
-              _vm._v(" "),
-              _c(
-                "v-btn",
-                {
-                  attrs: { color: "blue darken-1", flat: "" },
-                  on: { click: _vm.changeValue }
-                },
-                [_vm._v("Save")]
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-84b8f5ec", module.exports)
-  }
-}
 
 /***/ }),
 /* 66 */
@@ -19118,7 +19102,7 @@ exports.push([module.i, "\n.fab{\n\tborder-radius: 40%;\n}\n\n", ""]);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cart_vue__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cart_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cart_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_bar_vue__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_bar_vue__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_bar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__login_bar_vue__);
 //
 //
@@ -20057,7 +20041,7 @@ module.exports = Component.exports
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_bar_vue__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_bar_vue__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__login_bar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__login_bar_vue__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -20414,8 +20398,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             var data = {
-                client_id: 2,
-                client_secret: 'EnKrZ4zGwJt4ngAU1ABgpBVFeHoillqstoMxrdkG',
+                client_id: 6,
+                client_secret: 'L0vhJnECOk2AOoPznJO5BDBedYm2IOmrF2KL1pNy',
                 grant_type: 'password',
                 username: this.user.email,
                 password: this.user.password
@@ -39213,7 +39197,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(11)(content, options);
+var update = __webpack_require__(12)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -70098,7 +70082,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(11)(content, options);
+var update = __webpack_require__(12)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -70142,7 +70126,7 @@ module.exports = __webpack_require__(110);
 
 
 var utils = __webpack_require__(1);
-var bind = __webpack_require__(12);
+var bind = __webpack_require__(13);
 var Axios = __webpack_require__(112);
 var defaults = __webpack_require__(7);
 
@@ -70177,9 +70161,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(16);
+axios.Cancel = __webpack_require__(17);
 axios.CancelToken = __webpack_require__(126);
-axios.isCancel = __webpack_require__(15);
+axios.isCancel = __webpack_require__(16);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -70332,7 +70316,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(14);
+var createError = __webpack_require__(15);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -70767,7 +70751,7 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(1);
 var transformData = __webpack_require__(123);
-var isCancel = __webpack_require__(15);
+var isCancel = __webpack_require__(16);
 var defaults = __webpack_require__(7);
 var isAbsoluteURL = __webpack_require__(124);
 var combineURLs = __webpack_require__(125);
@@ -70927,7 +70911,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(16);
+var Cancel = __webpack_require__(17);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -71022,7 +71006,7 @@ module.exports = function spread(callback) {
 /* 128 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: Missing binding /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/node-sass/vendor/darwin-x64-59/binding.node\nNode Sass could not find a binding for your current environment: OS X 64-bit with Node.js 9.x\n\nFound bindings for the following environments:\n  - OS X 64-bit with Node.js 6.x\n\nThis usually happens because your environment has changed since running `npm install`.\nRun `npm rebuild node-sass --force` to build the binding for your current environment.\n    at module.exports (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/node-sass/lib/binding.js:15:13)\n    at Object.<anonymous> (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/node-sass/lib/index.js:14:35)\n    at Module._compile (module.js:649:30)\n    at Object.Module._extensions..js (module.js:660:10)\n    at Module.load (module.js:561:32)\n    at tryModuleLoad (module.js:501:12)\n    at Function.Module._load (module.js:493:3)\n    at Module.require (module.js:593:17)\n    at require (internal/module.js:11:18)\n    at Object.<anonymous> (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/sass-loader/lib/loader.js:3:14)\n    at Module._compile (module.js:649:30)\n    at Object.Module._extensions..js (module.js:660:10)\n    at Module.load (module.js:561:32)\n    at tryModuleLoad (module.js:501:12)\n    at Function.Module._load (module.js:493:3)\n    at Module.require (module.js:593:17)\n    at require (internal/module.js:11:18)\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:13:17)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModule.js:182:3)\n    at NormalModule.build (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModule.js:275:15)\n    at Compilation.buildModule (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:151:10)\n    at moduleFactory.create (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:456:10)\n    at runLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:170:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:27:11)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModule.js:182:3)\n    at NormalModule.build (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModule.js:275:15)\n    at Compilation.buildModule (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:151:10)\n    at moduleFactory.create (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/Compilation.js:456:10)\n    at factory (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModuleFactory.js:241:5)\n    at applyPluginsAsyncWaterfall (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModuleFactory.js:94:13)\n    at /Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/tapable/lib/Tapable.js:268:11\n    at NormalModuleFactory.params.normalModuleFactory.plugin (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/tapable/lib/Tapable.js:272:13)\n    at resolver (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModuleFactory.js:69:10)\n    at process.nextTick (/Users/sangit/Documents/Development/VueJS/Ecommerce 2/Ecommerce /node_modules/webpack/lib/NormalModuleFactory.js:194:7)\n    at process._tickCallback (internal/process/next_tick.js:112:11)");
 
 /***/ })
 /******/ ]);
